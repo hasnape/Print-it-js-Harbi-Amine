@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print it ! - Impressions d'entreprise</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="container">
+
+        <h1>
+            <img class="logo" src="./assets/images/logo.png" alt="Print it ! Impressions d'entreprises">
+        </h1>
+
+        <!-- Barre de recherche  -->
+
+        <div class="search-container">
+            <input type="text" placeholder="Rechercher un produit..." class="search-input">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path
+                    d="M10 2a8 8 0 106.32 13.906l4.387 4.387a1 1 0 001.414-1.414l-4.387-4.387A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+            </svg>
+        </div>
+
+        <a class="btn1 devis" href="mailto:contact@print-it.tld">Devis</a>
+
+        <div class="chariot-client">
+
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#000000"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M0 1h4.764l.545 2h18.078l-3.666 11H7.78l-.5 2H22v2H4.72l1.246-4.989L3.236 3H0zm7.764 11h10.515l2.334-7H5.855zM4 21a2 2 0 1 1 4 0a2 2 0 0 1-4 0m14 0a2 2 0 1 1 4 0a2 2 0 0 1-4 0" />
+            </svg>
+        </div>
+
+    </header>
+
+    <main>
+
+
+
+        <!-- Bannier  -->
+
+        <div id="banner" class="slider">
+
+            <nav class="banner1">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Catalogue produits</a></li>
+                    <li><a href="#">Tarifs</a></li>
+                    <li><a href="#">Nos papiers</a></li>
+                    <li><a href="#">Impressions online</a></li>
+                    <li><a href="#">Textile et goodies</a></li>
+                    <li><a href="#">Adhésifs</a></li>
+                    <li><a href="#">Infos pratiques</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+            </nav>
+
+            <!-- img Slides -->
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="item active">
+                        <img src="/assets/images/slideshow/slide1.jpg" alt="Image 1" />
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/slideshow/slide2.jpg" alt="Image 2" />
+                    </div>
+                    <div class="item">
+                        <img src="/assets/images/slideshow/slide3.jpg" alt="Image 3" />
+                    </div>
+
+                    <div class="item">
+                        <img src="/assets/images/slideshow/slide4.png" alt="Image 4" />
+                    </div>
+
+                </div>
+
+                <!-- Fleches -->
+
+                <div class="arrow">
+                    <button class="btn prev" id="prev">
+                        <img src="/assets/images/arrow_left.png" alt="arrow_left">
+                    </button>
+                    <button class="btn next" id="next">
+                        <img src="/assets/images/arrow_right.png" alt="arrow_right">
+                    </button>
+                </div>
+
+                <p class="p1">Impressions tous formats <span>en boutique et en ligne</span></p>
+
+                <!-- Bullet Points -->
+
+                <div class="dots" id="bullets">
+                    <div class="dot_selected"></div>
+                </div>
+
+            </div>
+            <section id="about-us" class="container">
+                <div>
+                    <h2>Qui sommes-nous ?</h2>
+                    <ul>
+                        <li>
+                            <p>Depuis près de 60 ans nous sommes un imprimeur familial spécialisé dans les besoins
+                                d’entreprises de petite et grande taille. Implantés à Rennes dans le quartier Bréquigny,
+                                nous
+                                accompagnons nos clients dans leurs projets d’impression.</p>
+                        </li>
+                        <li>
+                            <p>De la création de vos fichiers à la livraison de vos imprimés, nous mettons tout notre
+                                savoir-faire à votre disposition afin de répondre au mieux à vos attentes.</p>
+                        </li>
+                    </ul>
+                </div>
+                <aside>
+                    <img src="./assets/images/colors.jpg" alt="palette multicolore">
+                </aside>
+            </section>
+            <section id="products" class="container">
+                <div>
+                    <h2>Nos produits</h2>
+                    <p>Grâce à nos nombreuses années d'expérience dans l'impression de produits évènementiels et
+                        supports de
+                        communication, nous ne cessons d'innover et de perfectionner nos services afin de satisfaire au
+                        mieux nos clients. Vous pourrez parcourir les différentes rubriques du site afin de découvrir
+                        notre
+                        large gamme de papiers et finitions, pour des produits aussi divers que les dépliants ou
+                        plaquettes
+                        promotionnelles, les brochures, les flyers,<br>
+                        les goodies d’entreprises, les autocollants de
+                        toutes
+                        tailles... </p>
+                </div>
+                <aside>
+                    <img src="./assets/images/yellow-book.jpg" alt="Imprimeur avec un livre jaune dans les mains">
+                </aside>
+
+            </section>
+            <section id="question" class="bg-yellow">
+                <h2>Une question? Un devis?</h2>
+                <p>Appelez-nous au 02 12 34 56 78 ou faites une demande de devis ici :</p>
+                <a href="mailto:contact@print-it.tld" class="btn1 devis">Devis</a>
+            </section>
+            <section id="why-us" class="container">
+                <h2>Pourquoi faire appel à nous?</h2>
+                <div>
+                    <article>
+                        <img src="./assets/images/proximity-icon.png" alt="Icone Proximité">
+                        <h3>Proximité</h3>
+                        <p>Facile d’accès, une équipe compétente et à l'écoute des clients vous attend pour tous vos
+                            besoins
+                            d'impression et en communication visuelle.</p>
+                    </article>
+                    <article>
+                        <img src="./assets/images/quality-icon.png" alt="Icone Qualité">
+                        <h3>Qualité</h3>
+                        <p>Qu'il s'agisse de copies simples, de brochures, de cartes de visite ou de conception, nous
+                            vous
+                            garantissons toujours des résultats optimaux.</p>
+                    </article>
+                    <article>
+                        <img src="./assets/images/speedy-icon.png" alt="Rapidité Qualité">
+                        <h3>Rapidité</h3>
+                        <p>Vous pouvez compter sur nous pour répondre à vos sollicitations en temps et en heure.</p>
+                    </article>
+                </div>
+            </section>
+            <section id="contact" class="bg-lightblue">
+                <div class="container">
+                    <div>
+                        <h2>Contact</h2>
+                        <div>
+                            <h3>Par téléphone</h3>
+                            <ul>
+                                <li>Appelez-nous au 02 12 34 56 78</li>
+                                <li>Lun-Ven : 9h30-18h30</li>
+                                <li>Sam : 10h-13h et 14h-18h30</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Par e-mail</h3>
+                            <p>
+                                <a href="mailto:contact@print-it.tld" class="btn1">Nous écrire</a>
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Se rendre en boutique</h3>
+                            <p>5, rue Yves Noël,<br>
+                                35200 Rennes<br>
+                                <img class="inline-icon" src="./assets/images/metro.png" alt="metro" /> Clémenceau
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./assets/images/magnifying-glass.jpg" alt="Loupe avec palette bleue">
+                    </div>
+
+                </div>
+            </section>
+    </main>
+    <footer>
+        <div>
+            <p class="footer-contact">Contact</p>
+            <ul>
+                <li>Appelez-nous au 02 12 34 56 78</li>
+                <li>Lun-Ven : 9h30-18h30</li>
+                <li>Sam : 10h-13h et 14h-18h30</li>
+            </ul>
+        </div>
+        <div>
+            <p>5, rue Yves Noël,35200 Rennes<br>
+                <img src="./assets/images/metro.png" alt="metro" /> Clémenceau
+            </p>
+        </div>
+        <div>
+            <a href="mailto:contact@print-it.tld" class="btn1">Nous écrire</a>
+            <a href="mailto:contact@print-it.tld?subject=Demande&nbsp;de&nbsp;devis" class="btn2 devis">Devis</a>
+        </div>
+        <div>
+            <img class="footer-logo" src="./assets/images/logo.png" alt="Print it ! Impressions d'entreprises">
+        </div>
+    </footer>
+
+        <script src="/script.js"></script>
+
+
+</body>
+
+</html>
