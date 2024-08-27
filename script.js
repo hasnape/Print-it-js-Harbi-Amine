@@ -1,51 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-	let carousel = document.querySelector(".carousel");
-	let items = carousel.querySelectorAll(".item");
+	let items = document.querySelectorAll(".item");
 	let dotsContainer = document.querySelector(".dots");
+	let currentIndex = 0;
 
-	// Insérer des points dans le DOM
-	items.forEach((_, index) => {
+	// Créer les points
+	for (let i = 0; i < items.length; i++) {
 		let dot = document.createElement("span");
-		dot.classList.add("dot");
-		if (index === 0) dot.classList.add("dot_selected"); // Modifier ici pour utiliser dot_selected
-		dot.dataset.index = index;
+		dot.className = "dot";
 		dotsContainer.appendChild(dot);
-	});
 
-	let dots = document.querySelectorAll(".dot");
-
-	// Fonction pour afficher un élément spécifique
-	function showItem(index) {
-		items.forEach((item, idx) => {
-			item.classList.remove("active");
-			dots[idx].classList.remove("dot_selected"); // Modifier ici pour utiliser dot_selected
-			if (idx === index) {
-				item.classList.add("active");
-				dots[idx].classList.add("dot_selected"); // Modifier ici pour utiliser dot_selected
-			}
+		// Ajouter un événement pour chaque point
+		dot.addEventListener("click", function () {
+			currentIndex = i; // Mettre à jour l'index
+			updateCarousel();
 		});
 	}
 
-	// Écouteurs d'événements pour les boutons
-	document.querySelector(".prev").addEventListener("click", () => {
-		let index = [...items].findIndex((item) =>
-			item.classList.contains("active")
-		);
-		showItem((index - 1 + items.length) % items.length);
-	});
+	let dots = document.querySelectorAll(".dot");
 
-	document.querySelector(".next").addEventListener("click", () => {
-		let index = [...items].findIndex((item) =>
-			item.classList.contains("active")
-		);
-		showItem((index + 1) % items.length);
-	});
-
-	// Écouteurs d'événements pour les points
-	dots.forEach((dot) => {
-		dot.addEventListener("click", () => {
-			let index = parseInt(dot.dataset.index);
-			showItem(index);
+	// Fonction pour mettre à jour le carrousel
+	function updateCarousel() {
+		// Masquer tous les éléments et enlever la sélection des points
+		items.forEach((item, index) => {
+			item.style.display = index === currentIndex ? "block" : "none";
+			dots[index].classList.toggle("dot_selected", index === currentIndex);
 		});
+	}
+
+	// Initialiser l'affichage
+	updateCarousel();
+
+	// Bouton "Suivant"
+	document.querySelector(".next").addEventListener("click", function () {
+		currentIndex = (currentIndex + 1) % items.length;
+		updateCarousel();
+	});
+
+	// Bouton "Précédent"
+	document.querySelector(".prev").addEventListener("click", function () {
+		currentIndex = (currentIndex - 1 + items.length) % items.length;
+		updateCarousel();
 	});
 });
