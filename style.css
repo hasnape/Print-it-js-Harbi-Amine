@@ -570,3 +570,106 @@ footer .btn2 {
 		flex: 2;
 	}
 }
+
+@media all and (max-width: 768px) {
+    /* Conteneur global */
+    .container {
+        padding-inline: 3%;
+    }
+
+    /* Logo plus petit */
+    .logo {
+        width: 180px;
+        margin-block: 5px;
+    }
+
+    /* Recherche */
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+        padding-top: 15px;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .search-icon {
+        right: 0;
+        bottom: 0;
+        width: 24px;
+    }
+
+    /* Boutons de navigation */
+    .btn {
+        width: 40px;
+    }
+
+    /* Bannière */
+    #banner .p1 {
+        font-size: 32px;
+        line-height: 36px;
+        bottom: 200px;
+    }
+
+    /* À propos de nous */
+    #about-us {
+        flex-direction: column;
+    }
+
+    #about-us li {
+        width: 90%;
+    }
+
+    /* Produits */
+    #products {
+        flex-direction: column;
+    }
+
+    #products div {
+        padding: 0 2em;
+    }
+
+    /* Pourquoi nous */
+    #why-us>div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #why-us article {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #why-us img {
+        width: 50%;
+        height: auto;
+    }
+
+    /* Section contact */
+    #contact .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 3em 1em;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer div {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        max-width: 200px;
+    }
+
+    .footer-contact {
+        font-size: 14px;
+    }
+}
