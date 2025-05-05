@@ -1,99 +1,83 @@
 /* variables declaration */ :root { --primary-color: #3396C0; --secondary-color: #CD006B; --third-color: #EEE325; }
 
-/* Reset CSS */
+/* Reset & box-sizing */
 
 { box-sizing: border-box; margin: 0; padding: 0; }
 
 
-html, body { font-size: 100%; line-height: 1; }
+html, body { font-size: 100%; line-height: 1.6; }
 
-/* Typography */ h2 { font-family: 'Roboto Slab', serif; font-size: 40px; font-weight: 900; margin-block: 1em; }
+/* Typography */ h2 { font-family: 'Roboto Slab', serif; font-size: 2.5rem; font-weight: 900; margin-block: 1rem; }
 
-h3 { font-family: 'Roboto Slab', serif; font-size: 22px; font-weight: 900; margin-block: 1em; }
+h3 { font-family: 'Roboto Slab', serif; font-size: 1.375rem; font-weight: 900; margin-block: 1rem; }
 
-p, li { font-family: Roboto, sans-serif; font-size: 16px; line-height: 1.6; }
+p, li { font-family: Roboto, sans-serif; font-size: 1rem; line-height: 1.6; }
 
-/* Container */ .container { margin-inline: auto; padding-inline: 5%; width: 100%; }
+/* Global container */ .container { width: 100%; margin: 0 auto; padding-inline: 5%; max-width: 1200px; }
 
 /* Header */ header.container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding-block: 1rem; }
 
-.logo { width: 260px; margin-block: 10px; }
+.logo { width: 180px; }
 
-/* Search */ .search-container { display: flex; align-items: center; flex: 1; max-width: 670px; margin-inline: auto; }
+/* Search */ .search-container { display: flex; align-items: center; flex: 1 1 300px; margin-inline: 1rem; }
 
-.search-input { flex: 1; border: none; border-bottom: 2px solid #000; padding: 0.5rem; font-size: 1rem; }
+.search-input { flex: 1; border: none; border-bottom: 2px solid #000; padding: 0.5rem; }
 
-.search-input::placeholder { font-style: italic; }
+.search-icon { width: 24px; margin-left: -2rem; cursor: pointer; }
 
-.search-icon { width: 30px; cursor: pointer; }
+/* Devis button */ .btn1.devis { background-color: var(--secondary-color); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; white-space: nowrap; margin-inline: 1rem; }
 
-/* Devis button */ .btn1.devis { background-color: var(--secondary-color); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; white-space: nowrap; }
+/* Icons wrapper */ .chariot-client { display: flex; gap: 1rem; flex: 0 0 auto; }
 
-/* Chariot & User icons */ .chariot-client { display: flex; gap: 1rem; }
+.chariot-client svg { width: 32px; height: 32px; }
 
-.chariot-client svg { width: 35px; height: 35px; }
+/* Banner Section */ #banner.container { padding-block: 2rem; }
 
-/* Banner navigation */ .banner1 { background-color: #e7f4fa; display: flex; justify-content: center; width: 100%; height: 60px; }
+.banner1 { background-color: #e7f4fa; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; padding-block: 0.5rem; }
 
-.banner1 ul { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; }
+.banner1 ul { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding-inline: 0; }
 
-.banner1 li a { display: block; padding: 1rem 2rem; text-decoration: none; color: #000; text-align: center; }
+.banner1 li a { padding: 0.75rem 1rem; text-decoration: none; color: #000; }
 
-/* Carousel */ .carousel-container { position: relative; width: 100%; overflow: hidden; }
+.carousel-container { position: relative; overflow: hidden; margin-top: 1rem; }
 
 .carousel { display: flex; transition: transform 0.5s ease; }
 
 .item { min-width: 100%; flex-shrink: 0; }
 
-.item img { width: 100%; height: auto; object-fit: cover; display: block; }
+.item img { width: 100%; height: auto; display: block; }
 
-/* Arrows */ .btn { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 0; cursor: pointer; z-index: 10; }
+.btn.prev { left: 1rem; } .btn.next { right: 1rem; }
 
-.prev { left: 1rem; } .next { right: 1rem; }
+.btn { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10; }
 
-.btn img { width: 40px; height: auto; }
+.btn img { width: 40px; }
 
-/* Dots */ .dots { display: flex; justify-content: center; gap: 0.5rem; position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); }
+.dots { display: flex; justify-content: center; gap: 0.5rem; position: absolute; bottom: 1rem; width: 100%; left: 50%; transform: translateX(-50%); }
 
-.dot, .dot_selected { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; }
+.dot, .dot_selected { width: 12px; height: 12px; border: 2px solid #fff; border-radius: 50%; }
 
 .dot_selected { background-color: #fff; }
 
-/* Banner text */ #banner .p1 { font-family: 'Roboto Slab', serif; font-size: 3rem; font-weight: 900; color: #fff; text-shadow: 0 4px 4px rgba(0,0,0,0.25); text-align: center; margin-top: -5rem; position: relative; z-index: 5; }
+#banner .p1 { font-family: 'Roboto Slab', serif; font-size: 2.5rem; text-align: center; color: #fff; text-shadow: 0 4px 4px rgba(0,0,0,0.25); position: relative; margin-top: -3rem; z-index: 5; }
 
-#banner span { display: block; font-weight: 400; font-size: 1.5rem; }
+/* Sections */ section.container { margin-block: 4rem; } #about-us.container, #products.container, #why-us>div, #contact.container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; }
 
-/* Sections flex */ #about-us.container, #products.container, #why-us>div { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+#about-us article, #products article, #contact.container > div, #why-us article { flex: 1 1 300px; }
 
-#about-us li { flex: 1 1 60%; list-style: none; background: url("./images/tricolor-icon.png") no-repeat left top; padding-left: 2em; margin-bottom: 1em; }
+/* Question Section */ #question.container { background-color: var(--third-color); padding: 2rem; text-align: center; }
 
-#about-us aside, #products aside, #products div { flex: 1 1 35%; }
+#question h2 { font-size: 2rem; margin-bottom: 1rem; }
 
-#products .container > div { padding: 0 2rem; }
+/* Why Us */ #why-us article img { width: 80px; margin-bottom: 1rem; }
 
-#why-us article { flex: 1 1 30%; text-align: center; }
-
-#why-us img { width: 100%; max-width: 150px; margin: 0 auto; }
-
-/* Question/devis section */ #question { display: flex; flex-direction: column; align-items: center; background-color: var(--third-color); padding: 3rem 1rem; text-align: center; }
-
-#question h2 { font-size: 2.5rem; margin-bottom: 1rem; } #question p  { margin-bottom: 1rem; }
-
-/* Contact section */ #contact .container { display: flex; flex-wrap: wrap; gap: 2rem; padding: 3rem 0; }
-
-#contact .container > div { flex: 1 1 45%; }
-
-#contact h3 { background: url("./images/tricolor-icon.png") no-repeat left top; padding-left: 1.5em; margin-bottom: 0.5rem; }
-
-.inline-icon { vertical-align: middle; width: 20px; margin-left: 0.5rem; }
-
-/* Footer */ footer { background-color: #28363D; color: #fff; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; padding: 2rem; gap: 1rem; text-align: center; }
+/* Footer */ footer.container { display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 2rem; padding-block: 2rem; background-color: #28363D; color: #fff; text-align: center; }
 
 footer .btn1, footer .btn2 { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; color: #fff; }
 
 footer .btn1 { background-color: var(--primary-color); } footer .btn2 { background-color: var(--secondary-color); }
 
-.footer-logo { max-width: 200px; background: #fff; padding: 0.5rem; }
+.footer-logo { max-width: 180px; margin-top: 1rem; }
 
-/* Responsive */ @media (max-width: 768px) { .container { padding-inline: 3%; } header.container { flex-direction: column; align-items: center; } .search-container, .btn1.devis, .chariot-client { width: 100%; margin: 0.5rem 0; justify-content: center; } .btn1.devis { position: static; } #banner .p1 { font-size: 2rem; margin-top: -3rem; } .dots { position: static; transform: none; margin-top: 1rem; bottom: auto; } #about-us.container, #products.container, #why-us>div, #contact .container { flex-direction: column; text-align: center; } #about-us li, #products .container > div, #why-us article, #contact .container > div { flex: 1 1 100%; } #why-us img { max-width: 50%; } footer { flex-direction: column; } }
+/* Responsive */ @media (max-width: 768px) { header.container { flex-direction: column; align-items: center; } .search-container, .btn1.devis, .chariot-client { margin-block: 0.5rem; justify-content: center; } .logo { width: 140px; } #banner.container { padding-inline: 3%; } #banner .p1 { font-size: 1.75rem; margin-top: -2rem; } .dots { position: static; transform: none; margin-top: 1rem; } #about-us.container, #products.container, #why-us>div, #contact.container, footer.container { flex-direction: column; } #why-us article img { width: 60px; } }
 
